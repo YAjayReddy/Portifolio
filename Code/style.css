@@ -71,7 +71,7 @@ section{
      /* height: 100vh; */
     background: url(../Pictures/Portfolio7.png); 
     /* background: linear-gradient(rgba(0, 0,0, 0.527),rgba(0, 0, 0,0)),url(Screenshot244.png); */
-    background-size:cover ;
+    background-size:cover;
     background-position:center;
     display:flex;
     align-items: center;
@@ -369,19 +369,53 @@ span{
     padding-right: 2rem;
     
 }
-.project-content .content h3 {
-    
-
+.viewbox{
+    padding-left: 85rem;
 }
 .viewbox a{
     position: relative;
-    padding: 0.5rem 1rem ;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #748CAB;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    margin-left: 90rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 100%;
+    background-color: var(--bg-color);
+    border:  .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.viewbox .box:hover {
+    color: var(--bg-color);
+} 
+.viewbox .box:nth-child(2){
+    background: transparent;
+    color: var(--bg-color);
+}
+.viewbox .box:nth-child(2):hover{
+    color: var(--main-color);
+}
+.viewbox .box:nth-child(2)::before{
+    background: var(--bg-color);
+}
+.viewbox .box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+.viewbox .box:hover::before{
+    width: 100%;
 }
 .skills {
     min-height: auto;
